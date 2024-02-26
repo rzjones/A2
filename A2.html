@@ -71,6 +71,36 @@
                         alt="A bar chart showing the Percent of Residential Land zoned Exclusively for Single Family Development for 101 Muicipalities in Metropolitan Boston" 
                         width = 700/>
                 <p>This visualization serves as a gateway into the data, providing a visual representation of the depth and breadth of Metro Boston’s municipal zoning and land use. This bar chart visualizes the percent of residential land in a particular municipality that has been zoned exclusively for single-family homes (% SFZ). Organized in descending order, the chart shows a notable difference between roughly half of the 101 communities: a little over half of the municipalities zone some proportion of their residential land for Single Family use, while the other half zones none of their residential land zoned for Single-family use.</p>
+            
+                <img 
+                    src="images/2_SFZ_choropleth.jpg"
+                    alt = "A choropleth map showing the prevalence of Single Family Zoning in Metro Boston"
+                    width = 700/>
+                <p>To situate the data, I visualize municipalities that have residential areas that are zoned for single-family use only (1), and where other housing typologies are permitted (0) on a choropleth map. Presented as a binary using yellow and white, this map provides some interesting spatial patterns and clues as to residential zoning and land use; however, it does not answer deeper questions about who, what, and where upzoning efforts might be challenged, and which municipalities might have the greatest potential to upzone areas of their city. A key pattern emerges: many municipalities with a SFZ lie in the suburbs of Boston, but these areas are not limited to one area–they lie North, West, and South of the central metro region. Yellow was chosen for the visualization, since it is typically associated with single-family zoning classifications.</p>
+              
+                <img
+                    src="images/3_PercSFZ_Choropleth.jpg"
+                    alt= "A choropleth map showing the percent of residential land zoned exclusively for single-family development in Metro Boston"
+                    width=700/>
+                <p>This choropleth map fills in some of the gaps left behind by the previous choropleth map, in that it provides a continuous percentage—as opposed to a discrete binary—regarding the prevalence of single-family land use. The benefit here is a more nuanced and granular view into how much area is allocated to single-family development, and how proximate these areas are to the urban core of Boston. A yellow color ramp is used, so that areas with greater percentages of SFZ are darker yellow, and areas with less and lighter colored. The spatial pattern noticed earlier becomes more complex: the outermost suburbs of Boston have higher percentages of SFZ, while the inner suburbs of Boston have lower percentages.</p>
+           
+                <img
+                    src="images/4_SFZ_Pop_Bubble.jpg"
+                    alt= "A bubble diagram showing the percent of residential land zoned exclusively for single-famimly development in varying shades of yellow depending on percentage value, and the size of the bubble corresponding to the size of the population by municipality"
+                    width= 700/>
+                <p>Interested in the relationship between population and residential zoning, I compared total population size by % SFZ as a bubble map. Familiar names immediately jump out, such as Boston and Cambridge, while other names fill in the smaller spaces in between. Here, an interesting difference begins to emerge: many of the largest circles are white or pale yellow, while the smallest circles are darker yellow. Without drawing a direct causal relationship, this correlation makes sense: spaces with high populations tend to have dense developments, making single-family housing an inefficient typology in terms of space and population demands. The inverse is true in areas that developed in the post-war era, such as the suburbs, where there was more area to expand with single-family developments, and thus the population density was moderated.</p>
+
+                <img
+                    src="images/5_white_choropleth.jpg"
+                    alt= "A choropleth map showing the proportion of residents in a Metro Boston municipality that are white."
+                    width= 700/>
+                <p>To get a sense of the demographic profile of the 101 municipalities, I visualized the proportion of the population that is white. Some interesting, albeit historically predictable, patterns emerged from the choropleth map. Most notably, the inner core of Metro Boston has a relatively smaller population that is white, as indicated by the lighter shades of red. This stands in stark contrast to the outer belt of Boston, where the municipalities on the periphery are dark red, and thus have higher proportions of white residents. Visualizing the proportion of residents who are white, as opposed to the total number, normalizes the data so that large cities with large total populations do not skew the data, thus presenting an inaccurate representation of where white residents make up the minority/majority of the population. This calculation was done in tableau by dividing the [nhwhi]/[pop] fields to produce a new field [PropWhite].</p>
+
+                <img 
+                    src="images/6_Nonwhite_choropleth.jpg"
+                    alt= "A choropleth map showing the proportion of residents in a Metro Boston municipality that are non-white."
+                    width= 700/>
+                <p>This visualization serves as a corollary to the previous map, using the same exact set of variables. This map’s only difference is a reversed color ramp. I inverted the color gradient in order to highlight the areas where the proportion of residents who are white is least (i.e. where there are more people of color). So, in this case, darker colors correspond to a smaller proportion of white residents, and lighter colors correspond to a higher proportion of white residents. Again, the patterns emerging here make historical sense, as the downtown is darker than the suburbs due to the legacy of “White Flight”; however, there are a few outlying municipalities with higher proportions of non-white residents, such as Randolph and Framingham.</p>
             </div>
         </body>
         <h2>Summary </h2>
