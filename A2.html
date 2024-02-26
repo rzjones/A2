@@ -79,7 +79,7 @@
                 <p>To situate the data, I visualize municipalities that have residential areas that are zoned for single-family use only (1), and where other housing typologies are permitted (0) on a choropleth map. Presented as a binary using yellow and white, this map provides some interesting spatial patterns and clues as to residential zoning and land use; however, it does not answer deeper questions about who, what, and where upzoning efforts might be challenged, and which municipalities might have the greatest potential to upzone areas of their city. A key pattern emerges: many municipalities with a SFZ lie in the suburbs of Boston, but these areas are not limited to one area–they lie North, West, and South of the central metro region. Yellow was chosen for the visualization, since it is typically associated with single-family zoning classifications.</p>
               
                 <img
-                    src="images/3_PercSFZ_Choropleth.jpg"
+                    src="images/3.jpg"
                     alt= "A choropleth map showing the percent of residential land zoned exclusively for single-family development in Metro Boston"
                     width=700/>
                 <p>This choropleth map fills in some of the gaps left behind by the previous choropleth map, in that it provides a continuous percentage—as opposed to a discrete binary—regarding the prevalence of single-family land use. The benefit here is a more nuanced and granular view into how much area is allocated to single-family development, and how proximate these areas are to the urban core of Boston. A yellow color ramp is used, so that areas with greater percentages of SFZ are darker yellow, and areas with less and lighter colored. The spatial pattern noticed earlier becomes more complex: the outermost suburbs of Boston have higher percentages of SFZ, while the inner suburbs of Boston have lower percentages.</p>
@@ -96,23 +96,23 @@
                 <p>Interested in the relationship between population and residential zoning, I compared total population size by % SFZ as a bubble map. Familiar names immediately jump out, such as Boston and Cambridge, while other names fill in the smaller spaces in between. Here, an interesting difference begins to emerge: many of the largest circles are white or pale yellow, while the smallest circles are darker yellow. Without drawing a direct causal relationship, this correlation makes sense: spaces with high populations tend to have dense developments, making single-family housing an inefficient typology in terms of space and population demands. The inverse is true in areas that developed in the post-war era, such as the suburbs, where there was more area to expand with single-family developments, and thus the population density was moderated.</p>
 
                 <img
-                    src="images/5_white_choropleth.jpg"
+                    src="images/5.jpg"
                     alt= "A choropleth map showing the proportion of residents in a Metro Boston municipality that are white."
                     width= 700/>
                 <p>To get a sense of the demographic profile of the 101 municipalities, I visualized the proportion of the population that is white. Some interesting, albeit historically predictable, patterns emerged from the choropleth map. Most notably, the inner core of Metro Boston has a relatively smaller population that is white, as indicated by the lighter shades of red. This stands in stark contrast to the outer belt of Boston, where the municipalities on the periphery are dark red, and thus have higher proportions of white residents. Visualizing the proportion of residents who are white, as opposed to the total number, normalizes the data so that large cities with large total populations do not skew the data, thus presenting an inaccurate representation of where white residents make up the minority/majority of the population. This calculation was done in tableau by dividing the [nhwhi]/[pop] fields to produce a new field [PropWhite].</p>
 
                 <img 
-                    src="images/6_Nonwhite_choropleth.jpg"
+                    src="images/6.jpg"
                     alt= "A choropleth map showing the proportion of residents in a Metro Boston municipality that are non-white."
                     width= 700/>
                 <p>This visualization serves as a corollary to the previous map, using the same exact set of variables. This map’s only difference is a reversed color ramp. I inverted the color gradient in order to highlight the areas where the proportion of residents who are white is least (i.e. where there are more people of color). So, in this case, darker colors correspond to a smaller proportion of white residents, and lighter colors correspond to a higher proportion of white residents. Again, the patterns emerging here make historical sense, as the downtown is darker than the suburbs due to the legacy of “White Flight”; however, there are a few outlying municipalities with higher proportions of non-white residents, such as Randolph and Framingham.</p>
                <img
-                   src="images/7_PovInc_Choro.jpg"
+                   src="images/7.jpg"
                    alt="A choropleth map showing the percent of households that live at or below the poverty line in Metro Boston. Areas shown on the map fall within a single-family zoning district."
                    width= 550
                    height=400/>
                 <img
-                    src="images/8_Pov_Inc_Choro.jpg"
+                    src="images/8.jpg"
                     alt="A choropleth map showing the percent of households that live at or below the poverty line in Metro Boston. Areas shown on the map fall within a residential district that allows other housing types besides Single Family developments"
                     width=550
                     height=400/>
@@ -120,12 +120,12 @@
                  <p>This visualization expands upon the demographic profile illustrated by the previous two choropleth maps using household income. However, rather than visualize the entire income spectrum on a single map, I wanted to explore the spatial granularity of household incomes, so I focused on three different income levels, with the first being those that fell below the 2016 poverty line. The poverty line for a family of four in 2016 was $24,300, so I combined [incu10] + [inc1015] + [inc1520] + [inc2025] into a single calculated field, and then normalized these data by dividing them by the total number of households [hh] to calculate the proportion of the population that lived at or below the poverty line.</p>
 
                 <img
-                    src="images/9_AMIInc_Choro.jpg"
+                    src="images/9.jpg"
                     alt="A choropleth map showing the percent of households that live at the Area Median Income in Metro Boston. Areas shown on the map fall within a single-family zoning district"
                     width=550
                     height=400/>
                 <img
-                    src="images/10_AMIinc_Choro.jpg"
+                    src="images/10.jpg"
                     alt="A choropleth map showing the percent of households that live at the Area Median Income in Metro Boston. Areas shown on the map fall within a residential district that allows other housing types besides Single Family developments"
                     width=550
                     height=400/>
@@ -133,12 +133,12 @@
                 <p>The spatial trends that emerge from these two maps seem less divergent as those from the last two. For example, the upper range of percentages between the two areas are not as different—22.7% in areas where SFZ is permitted (1), and 19% in areas where other residential zoning is allowed (0). Also, it appears that municipalities that are both farther away from Boston and have Single Family Zoning have a smaller proportion of households earning the AMI. This appears to contrast with equally-distant areas where other housing typologies are allowed—in these areas, the colors are a darker blue, and thus suggest a greater share of households living at the AMI. Further analysis is needed to confirm the income profile and distribution of these extant suburbs (i.e. are they poorer or higher-income areas?).</p>
 
                 <img
-                    src="images/11_200Inc_Choro.jpg"
+                    src="images/11.jpg"
                     alt="A choropleth map showing the percent of households in Metro Boston with an income equal to or greater than $200k. Areas shown on the map fall within a single-family zoning district"
                     width=550
                     height=400/>
                 <img
-                    src="images/12_200inc_Choro.jpg"
+                    src="images/12.jpg"
                     alt="A choropleth map showing the percent of households in Metro Boston with an income equal to or greater than $200k. Areas shown on the map fall within a residential district that allows other housing types besides Single Family developments"
                     width=550
                     height=400/>
@@ -146,7 +146,7 @@
                 <p>These two choropleth maps present several interesting patterns. First, in areas where Single Family Zoning was the only permitted residential use type, the highest percentage noted was 55.8%; while areas that permitted other housing typologies had a proportion almost 65%. It is difficult to determine the difference between these two values without further spatial analysis and building typology research. Second, these data mapped mostly onto the outer fringe of metropolitan Boston. In other words, for both SFZ and areas that allowed other-housing types, the suburbs had the highest proportion of households making more than $200k. This is visualized by the darker blue colors encircling the lighter colors around downtown Boston. It is also interesting to note that in areas where other housing typologies are allowed, the suburbs have the highest percentage of wealthy residents. These areas tend to have a very small amount of land dedicated to this use, and yet this is where some of the largest proportions of wealthy residents live. Wellesley exemplifies this point. Here, a minority of the land is used for other residential use, but it has almost 65% of residents earning $200k—the highest proportion in the dataset.</p>
 
                 <img
-                    src="images/13_NonConf_Bar.jpg"
+                    src="images/13.jpg"
                     alt="A bar chart showing the municipalities in Metro Boston with non-conforming residential land uses in their single family zoning districts. Shown as a percentage of total residential land area in descending order from most non-conforming to least."
                     width=700/>
                 <p>This bar chart visualizes some of the contradictions and non-conformities that exist in the municipalities of our data set. Taking the “% land area” variable, I ran a simple calculation that subtracts the percentage from 100, giving us the inverse: the percent of residential land that is NOT used for single family zoning. I then apply a filter to my newly calculated field to exclude percentages equal to 100 (i.e. areas where 100% of residential land is used for Single Family housing). I apply a second filter using the “Only Single Family” variable to exclude areas where other housing typologies are allowed (0). The result produces a chart that shows the amount of residential land used for other housing typologies in areas where only single-family zoning is permitted. I sorted the data in descending order to emphasize how much residential land has been developed for non-single family purposes, despite the fact that the land falls within a zone dedicated to that use type. There are a number of reasons why these contradictions might be, such as historic developments preceding zoning codes and density requirements. As a result, many communities residential areas’ are already developed with existing, legal non-conforming structures.</p>
